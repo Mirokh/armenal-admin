@@ -1,0 +1,1 @@
+export default {  namespace: 'layout',  state() {    return {      leftDrawerOpen: true    }  },  mutations: {    leftDrawerOpen(state) {      state.leftDrawerOpen = !state.leftDrawerOpen    }  },  actions: {    toggleLeftDrawerOpen({commit}) {      commit('leftDrawerOpen')    },    login() {    }  }}

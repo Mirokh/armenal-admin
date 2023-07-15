@@ -1,0 +1,1 @@
+<template>  <h3>Settings works!</h3></template><script>export default {  name: "SettingsView"}</script><style scoped></style>

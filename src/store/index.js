@@ -1,0 +1,1 @@
+import layout from './layout'// Create a new store instance.const store = {  modules: {    layout  }}export default store
