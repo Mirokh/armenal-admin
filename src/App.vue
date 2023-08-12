@@ -1,8 +1,10 @@
 <template>
   <div>
     <q-layout view="hHh lpR fFf" class="bg-grey-1">
-      <HeaderComponent/>
-      <Sidebar/>
+      <div v-if="$route.name !== 'login'">
+        <HeaderComponent/>
+        <Sidebar/>
+      </div>
       <q-page-container>
         <router-view/>
       </q-page-container>

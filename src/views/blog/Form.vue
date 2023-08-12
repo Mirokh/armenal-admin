@@ -152,9 +152,16 @@ export default {
   methods: {
     async saveForm() {
       const formData = this.getFormData(this.form)
+      const token = localStorage.getItem('auth')
+
+      if (!token) {
+        console.error('unauthorized')
+        return
+      }
+
       const headers = {
         'Content-Type': 'multipart/form-data',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWQiOjIsImlhdCI6MTY4OTQ0NDk5NCwiZXhwIjoxNjg5NDUyMTk0fQ.HRxQjWpzhuYxP-wJxv5n-C9op1kiioWxZATLWcAPKw0'
+        'Authorization': `Bearer ${token}`
       };
 
       if (this.draft.id) {
